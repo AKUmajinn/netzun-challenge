@@ -68,6 +68,7 @@ export default {
   updated() {},
   methods: {
     async send() {
+      // Intenta el actualizar el producto y redirige al index
       try {
         await this.$axios.$put(`/products/${this.$route.params.id} `, {
           name: this.name,

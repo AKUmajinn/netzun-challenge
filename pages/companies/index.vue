@@ -1,5 +1,6 @@
 <template lang="pug">
   .container
+    //- Solo muetsra la opcion de crear una empresa en caso que el usuario no tenga una
     .row(
       v-if="user.companyId === null || user.companyId === undefined "
     )
@@ -17,6 +18,7 @@
       ul.card-list(
         v-if="companies.length > 0"
       )
+
         company-card(
           v-for="company in companies" :key="company.id"
           :company="company"
@@ -41,6 +43,7 @@ export default {
     // propierty: { required: false, type: String },
   },
   async fetch({ store, $axios, params, redirect }) {
+    // obtiene las compañias en el server side
     const data = await $axios.$get('/companies')
     store.commit('SET_DATA', { destination: 'companies', data })
   },

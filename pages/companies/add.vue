@@ -53,6 +53,7 @@ export default {
   updated() {},
   methods: {
     async send() {
+      // Intenta el crear y unirse a una compañia nueva, de hacerse, actualiza el usuario a travez del auth module y redirige al index
       try {
         await this.$axios.$post('/companies/create_join', {
           name: this.name,

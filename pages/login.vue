@@ -43,6 +43,7 @@ export default {
   },
   methods: {
     async send() {
+      // Intenta el login, y setea el token de forma manual a travez del auth module y redirige al index
       const data = {
         email: this.email,
         password: this.password

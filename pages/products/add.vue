@@ -43,6 +43,7 @@ export default {
     // propierty: { required: false, type: String },
   },
   async fetch({ store, $axios, params, redirect }) {
+    // obtive las capoñanias para poder realizar el filtro de la del usuario en el getter
     const company = await $axios.$get('/companies')
     store.commit('SET_DATA', { destination: 'companies', data: company })
   },
@@ -68,7 +69,7 @@ export default {
   updated() {},
   methods: {
     async send() {
-      console.log('enviamdo')
+      // Intenta el crear el producto y redirige al index
       try {
         await this.$axios.$post('/products', {
           companyId: this.userCompany[0].id,

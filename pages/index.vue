@@ -28,7 +28,7 @@
 </template>
 
 <script>
-import { mapState, mapGetters, mapActions } from 'vuex'
+import { mapState, mapGetters } from 'vuex'
 
 import productCard from '@/components/productCard.vue'
 export default {
@@ -38,7 +38,7 @@ export default {
     productCard
   },
   async fetch({ store, $axios, params, redirect }) {
-    // En el caso de en el server side, encontrar que el usuario no tiene compañia, mandarlo a el registro de, de lo contrario TODO:
+    // En el caso de en el server side, encontrar que el usuario no tiene compañia, mandarlo a el registro de, de lo contrario, traer las compañias (para filtras la del user) y los productos de la compañia
 
     if (
       store.state.auth.user.companyId === undefined ||
@@ -54,11 +54,7 @@ export default {
     }
   },
   data() {
-    return {
-      email: '',
-      password: '',
-      searchString: ''
-    }
+    return {}
   },
   computed: {
     ...mapState({
@@ -69,12 +65,10 @@ export default {
     })
   },
   methods: {
-    ...mapActions({
-      set_data: 'set_data'
-    }),
-
     async leaveCompany() {
       try {
+        // ejecuta el enpoint para salir de la compañia,
+        // actualiza el user pasandolo al auth module (esta en el state)
         await this.$axios.$post('/companies/leave')
         const user = await this.$axios.$get('/users/me')
         this.$auth.setUser(user)

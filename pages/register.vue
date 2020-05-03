@@ -53,6 +53,7 @@ export default {
   },
   methods: {
     async send() {
+      // Intenta el registro en la plataforma e ingresa el token de este ususario al auth module
       const response = await this.$axios.post('/auth/signup', {
         name: this.name,
         email: this.email,
@@ -60,9 +61,7 @@ export default {
         passwordConfirmation: this.rePassword
       })
 
-      this.$auth
-        .setUserToken(response.data.sessionId)
-        .then(() => this.$toast.success('User set!'))
+      this.$auth.setUserToken(response.data.sessionId)
     }
   }
 }

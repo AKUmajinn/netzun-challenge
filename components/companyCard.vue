@@ -6,6 +6,8 @@
     .company-card__content
       p.title {{ company.name }}
       p {{ company.ruc }}
+
+      //- Solo muetsra la opcion de unirse a esta empresa en caso que el usuario no tenga una
       a.btn.btn--ghost(
         v-if="user.companyId === null || user.companyId === undefined"
         href="#"

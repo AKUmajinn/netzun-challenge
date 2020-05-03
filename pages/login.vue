@@ -14,7 +14,6 @@
           type='text'
           v-model="password"
           placeholder="password"
-          @enter="validate()"
         )
         a.btn(
           href="#"

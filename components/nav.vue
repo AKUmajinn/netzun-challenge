@@ -23,6 +23,7 @@
       )
         li
           a(
+            href="#"
             @click="logOut()"
           ) Desconectarse
         li

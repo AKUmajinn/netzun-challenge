@@ -4,6 +4,7 @@
   padding: 0 15px;
   margin-bottom: 50px;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -21,6 +22,9 @@
   }
   .user-menu{
     position: relative;
+    >a{
+      border-bottom: 1px solid;
+    }
 
     ul{
       background-color: $g-white;

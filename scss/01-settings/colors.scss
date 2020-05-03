@@ -1,0 +1,27 @@
+//global colors
+:root {
+  --g-text-dark :#8B9099;
+  --g-text-darker :#000425;
+
+  --g-white :#FFFFFF;
+
+  --g-body :#F8F8FA;
+
+  --g-error :#FF6055;
+  --g-sucess :#00D56B;
+}
+
+
+//------------------SCSS vars (para mas placer)------------------//
+
+
+$g-text-dark: var(--g-text-dark);
+$g-text-darker: var(--g-text-darker);
+
+$g-body: var(--g-body);
+
+$g-white: var(--g-white);
+
+
+$g-error: var(--g-error);
+$g-sucess: var(--g-sucess);

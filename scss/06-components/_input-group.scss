@@ -1,0 +1,15 @@
+.input-group{
+  display: grid;
+  grid-row-gap: 30px;
+  row-gap: 30px;
+  width: 100%;
+
+  &--two-columns{
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
+    row-gap: 20px;
+    @media screen and (max-width: $small-viewport){
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}

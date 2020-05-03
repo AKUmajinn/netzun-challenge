@@ -1,0 +1,32 @@
+.btn{
+  min-height: 60px;
+  min-width: 280px;
+  width: fit-content;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $g-text-darker;
+  border: 2px solid $g-text-darker;
+  border-radius: 100px;
+  font-family: $g-secondary-font;
+  font-size: 14px;
+  font-weight: bold;
+
+  &--full-width{
+    width: 100%;
+  }
+
+  &:hover{
+    background-color: $g-text-darker;
+    color: $g-white;
+  }
+
+  &--ghost{
+    border: transparent;
+    &:hover{
+      background-color: transparent;
+      color: $g-text-darker;
+    }
+  }
+}

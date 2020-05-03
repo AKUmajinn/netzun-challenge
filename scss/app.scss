@@ -1,0 +1,92 @@
+
+// 00.- Vendor
+// 01.- Settings ⚙️
+// 02.- Tools 🛠️
+// 03.- Generic
+// 04.- Elements
+// 05.- Objects
+// 06.- Components
+// 07.- Shame
+
+// =========================
+// 00.- Vendor
+// por si acaso
+// =========================
+//@import "00-vendor/materialize/materialize";
+
+
+// =========================
+// 01.- Settings ⚙️ import of global variables
+// =========================
+@import "01-settings/colors";
+@import "01-settings/fonts";
+@import "01-settings/sizing";
+
+@import "01-settings/mixins";
+
+// =========================
+// 02.- Tools 🛠️ import of tools
+// =========================
+
+// =========================
+// 03.- Generic - font import
+// =========================
+@import "03-generic/poppins";
+@import "03-generic/roboto";
+
+// =========================
+// 04.- Elements - import of elements
+// =========================
+@import "04-elements/normalize";
+@import "04-elements/base";
+@import "04-elements/forms";
+
+@import "04-elements/grid";
+
+// =========================
+// 04.- Elements - import of grid
+// =========================
+
+
+
+// - STYLES OF TEMPLATE -
+
+// =========================
+// 0x.- Objects - import of objects
+// =========================
+// @import "05-objects";
+
+// =========================
+// 05.- Layout
+// =========================
+
+// =========================
+// 06.- Components
+// =========================
+@import "06-components/btns";
+@import "06-components/input-group";
+@import "06-components/input";
+@import "06-components/switch";
+@import "06-components/checkbox";
+
+@import "06-components/login";
+
+@import "06-components/nav";
+@import "06-components/header";
+
+@import "06-components/card-list";
+@import "06-components/cards";
+
+
+
+// =========================
+// 07.- Utilities
+//
+// =========================
+
+
+// =========================
+// 08.- Shame
+// (where is your honor?, why use this?)
+// =========================
+//@import "07-shame/"

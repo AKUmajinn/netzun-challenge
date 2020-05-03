@@ -1,0 +1,16 @@
+@mixin transition($properties, $time, $type, $delayTime){
+	will-change: $properties;
+  transition-property: $properties;
+  transition-duration: $time;
+  transition-timing-function: $type;
+
+  @if $delayTime != 0{
+    transition-delay: $delayTime;
+  }
+}
+
+@mixin calculatedVh($property, $value){
+	#{$property}: calc(var(--vh, 1vh) * #{$value});
+}
+
+

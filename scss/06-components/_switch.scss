@@ -1,0 +1,70 @@
+.switch{
+  display: inline-block;
+  label {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 36px;
+    height: 20px;
+    //background-image: url('~assets/images/icons/switch-icons.svg');
+    display: block;
+    background-color: $g-text-dark;
+    border-radius: 50px;
+    //border: 1px solid rgba(136,132,132,0.34902);
+    position: relative;
+    @include transition(all, 0.3s, linear, 0);
+  }
+
+  label:after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 50%;
+    transform: translateX(-100%);
+
+    width: 16px;
+    height: 16px;
+
+    background: #fff;
+    border-radius: 10px;
+
+    @include transition(all, 0.3s, linear, 0);
+  }
+
+  input:checked + label:after {
+    left: calc(100% - 2px);
+  }
+  &--selected{
+    label{
+      background-color: $g-text-darker;
+    }
+
+  }
+
+  /* @media screen and (max-width: $small-viewport){
+    label{
+      height: 14px;
+      width: 34px;
+      border-radius: 100px;
+      border: none;
+      background: #b5b5b5;
+
+    }
+    label:after{
+      top: -25%;
+      height: 20px;
+      width: 20px;
+      box-shadow: 0px 2px 2px 1px rgba(0,0,0,0.19);
+      border-radius: 100px;
+      border: none;
+      background-color: #F1F1F1;
+    }
+    input:checked + label {
+      background-color: #A0A3F2;
+    }
+    input:checked + label:after{
+      background-color: red;
+    }
+
+
+  } */
+}
